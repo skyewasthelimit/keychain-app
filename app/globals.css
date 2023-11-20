@@ -18,10 +18,87 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(9, 5, 10)
+}
+
+main {
+  margin: 0 10vw 0 10vw;
+  padding: 0 4vw 0 4vw
+}
+
+.navbar-menu div {
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.navbar-menu {
+  width: 30px;
+  display: block;
+  margin: 1em 0 0 1em;
+}
+
+.one {
+  width: 30px;
+}
+
+.two {
+  width: 20px;
+}
+
+.three {
+  width: 25px;
+}
+
+.navbar-menu:hover div {
+  width: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #333;
+  color: #95A9E7;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+#testimonial-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+}
+
+.testimonial-1 {
+  padding: 3vw;
+  height: 100px;
+  width: 200px;
+  background-color: #95A9E7;
+  text-align: center;
+}
+
+.testimonial-2 {
+  padding: 3vw;
+  height: 100px;
+  width: 200px;
+  background-color: #95A9E7;
+  text-align: center;
+
+}
+
+.testimonial-3 {
+  padding: 3vw;
+  height: 100px;
+  width: 200px;
+  background-color: #95A9E7;
+  text-align: center;
 }
