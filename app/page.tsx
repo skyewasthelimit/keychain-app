@@ -71,8 +71,20 @@ export default function Home() {
       <div className="h-[100vh]">
 
       </div>
+
+      <div className="w-[100vw] h-40 bg-gradient-to-b from-[#030e25] to-[#14254b] font-sans text-[#AABDFC]">
+    <p className="mx-3 p-1">
+    <a href="https://www.instagram.com/skyewasthelimit" target="_blank"><img className="absolute ml-[90vw] right-4 mt-4" style={{ width: '30px', height: '30px' }} src="/images/instagramlogo.png" alt="Instagram Logo" /></a>
+    <a href="https://twitter.com/skyewasthelimit" target="_blank"><img className="absolute ml-[90vw] right-14 mt-4" style={{ width: '30px', height: '30px' }} src="/images/twitterlogo.png" alt="Twitter Logo" /></a>
+    <a href="https://www.linkedin.com/in/skye-mclean-a43982295" target="_blank"><img className="absolute ml-[90vw] right-24 mt-4" style={{ width: '30px', height: '30px' }} src="/images/linkedinlogo.png" alt="LinkedIn Logo" /></a>
+      Skye McLean <br />
+      Web Development & Programming <br />
+      Contact me: <a className="hover:text-[#C2A0E0]" href="">skyemclean87@gmail.com</a>
+    </p>
+  </div>
     </main>
+    
   )
 }
 
-// https://www.youtube.com/watch?v=vHq1ncfGqAk
+// https://www.youtube.com/watch?v=vHq1ncfGqAk #071229
