@@ -35,9 +35,7 @@ main {
 }
 
 .navbar-menu {
-  width: 30px;
   display: block;
-  margin: 1em 0 0 1em;
 }
 
 .one {
@@ -56,49 +54,29 @@ main {
   width: 30px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  background-color: #333;
-  color: #95A9E7;
-}
-
-.nav-item {
-  cursor: pointer;
-}
-
 #testimonial-block {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  margin: 20px;
-  padding: 10px;
+  margin: 50px;
 }
 
 .testimonial-1 {
-  padding: 3vw;
-  height: 100px;
-  width: 200px;
+  padding: 40px;
   background-color: #95A9E7;
   text-align: center;
 }
 
 .testimonial-2 {
-  padding: 3vw;
-  height: 100px;
-  width: 200px;
+  padding: 40px;
   background-color: #95A9E7;
   text-align: center;
 
 }
 
 .testimonial-3 {
-  padding: 3vw;
-  height: 100px;
-  width: 200px;
+  padding: 40px;
   background-color: #95A9E7;
   text-align: center;
 }
