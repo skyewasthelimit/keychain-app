@@ -110,9 +110,9 @@ export default function Home() {
             <li>✔ 3 Year Warranty Plan</li>
             <li>✔ Unlimited Pin Changes</li>
             <li>✔ Security Car Auto-Dispatch</li>
-            <li>✔  Bonus Car KeyChain Pad</li>
-            <li>✔  Securi-Cam™ Model</li>
-            <li>✔  Break-In Coverage</li>
+            <li>✔ Bonus Car KeyChain Pad</li>
+            <li>✔ Securi-Cam™ Model</li>
+            <li>✔ Break-In Coverage</li>
           </ul>
           <p className="mb-2 text-center font-bold text-[3vh]">$469.99 / year</p>
         </div>
