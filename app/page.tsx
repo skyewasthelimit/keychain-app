@@ -1,18 +1,34 @@
 'use client';
-import React from "react";
+import React, { useState } from "react";
 import YouTubePlayer from './components/YouTubePlayer';
-import FlipPanel from './components/FlipPanel';
 
 export default function Home() {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+
 
   return (
     <main className="flex min-h-[40vh] flex-col items-center justify-between">
       <div className="pt-3 flex w-full items-start justify-start font-mono">
-        <div className="navbar-menu">
+        <div onClick={toggleDropdown} className="navbar-menu">
           <div className="one"></div>
           <div className="two"></div>
           <div className="three"></div>
         </div>
+        {isDropdownOpen && (
+          <div className="dropdown-content">
+            <div className="dropdown-item"><a href="" target="_blank">About</a></div>
+            <div className="dropdown-item"><a href="" target="_blank">Products</a></div>
+            <div className="dropdown-item"><a href="" target="_blank">Get Started</a></div>
+            <div className="dropdown-item"><a href="" target="_blank">Plans</a></div>
+            <div className="dropdown-item"><a href="" target="_blank">Contact</a></div>
+            <div className="dropdown-item"><a href="" target="_blank">FAQ</a></div>
+          </div>
+        )}
       </div>
       <div className="relative before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#ea01ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
 
@@ -27,15 +43,15 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col justify-between gap-2 items-start p-4">
-        <button className="py-2 px-4 rounded-md bg-gray-500 text-xl bottom-0 left-0 min-w-20vh items-end justify-center hover:bg-gray-700 hover:border border-white">Read More</button>
-        <button className="py-2 px-4 border-2 border-white border-solid rounded-md text-xl bottom-0 left-0 min-w-20vh items-end justify-center hover:border">Quickstart</button>
+        <button className="py-2 px-4 rounded-md bg-gray-500 text-xl bottom-0 left-0 min-w-20vh items-end justify-center hover:bg-gray-700">Read More</button>
+        <button className="py-2 px-4 border-2 border-white border-solid rounded-md text-xl bottom-0 left-0 min-w-20vh items-end justify-center hover:bg-gray-800">Quickstart</button>
       </div>
 
-      <div className="pb-4 mb-3 flex flex-col bg-gray-500 mt-10">
+      <div className="pb-4 mb-3 flex flex-col bg-gray-500 mt-10 border">
         <div className="flex font-bold text-5xl bottom-0 left-0 h-39 w-full items-end">
-          <div className="p-1">
+          <div className="flex flex-row-reverse items-center gap-2 p-4">
             Intuitive design
-            <img className="relative -mt-14 -m-10" style={{width: '150px', height: '150px'}} src="/images/keyicon.png" alt="KeyChain Logo" />
+            <img className="relative -mt-10 -m-10" style={{width: '150px', height: '150px'}} src="/images/keyicon.png" alt="KeyChain Logo" />
           </div>
         </div>
 
@@ -52,7 +68,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[#BBE3F2] via-[#90C1E2] via-[#5C7CA7] via-[#3C3E64] to-[#6E739A] w-[400px] h-[400px] mt-3 text-black">
+      <div className="bg-gradient-to-r from-[#BBE3F2] via-[#90C1E2]  to-[#6E739A] w-[400px] h-[400px] mt-3 text-black">
         <div className="bg-gradient-to-r from-[#eef9fd] via-[#bababb] to-[#fafbfd] w-[400px] h-[400px] m-5 text-black">
           <p className="m-6 text-2xl tracking-widest pt-4 pl-1">"Since I started using <strong>KeyChain</strong> my home has never felt safer! If I lose my key I can easily contact a service agent directly from the pad. <strong>KeyChain</strong> agents work 24 hours per day to ensure customer safety and care"</p>
           <p className="pl-14"> - John Plentyburg, <span className="text-sky-700">Customer</span></p>
@@ -60,17 +76,18 @@ export default function Home() {
       </div>
 
       <div id="testimonial-block" className="gap-3 text-lg">
-        <div id="reveal" className="testimonial-1 m-1 flex justify-center items-center">Solutions.</div>
-        <div id="reveal" className="testimonial-2 m-1 flex justify-center items-center">Security.</div>
-        <div id="reveal" className="testimonial-3 m-1 flex justify-center items-center">Satisfaction.</div>
+        <div id="reveal" className="testimonial-1 border m-1 flex justify-center items-center">Solutions.</div>
+        <div id="reveal" className="testimonial-2 border m-1 flex justify-center items-center">Security.</div>
+        <div id="reveal" className="testimonial-3 border m-1 flex justify-center items-center">Satisfaction.</div>
       </div>
 
       <div className="h-[2vh] before:absolute before:h-[300px] before:w-[700px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-3xl before:content-[''] after:absolute after:-z-20 after:h-[280px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#832886] after:dark:opacity-20 before:lg:h-[360px] z-[-1]">
 
       </div>
+
       <YouTubePlayer videoId="vHq1ncfGqAk" />
 
-      <div className="flex flex-row gap-6 m-20">
+      <div className="flex flex-row gap-6 m-10">
         <div className="overflow-y-scroll h-[30vh] w-[30vw] bg-gray-500 hover:bg-gradient-to-t from-slate-800 to-slate-400">
           <p className="text-center font-bold text-[3vh]">Basic Plan</p>
           <ul className="m-2 text-left font-bold text-[1.8vh]">
@@ -118,14 +135,15 @@ export default function Home() {
         </div>
       </div>
 
-      <button className="py-2 px-4 rounded-md bg-gray-500 text-xl bottom-0 left-0 min-w-20vh items-end justify-center hover:bg-gray-700 hover:border border-white">Choose Your Plan</button>
+      <button className="py-2 px-4 mb-6 border rounded-md bg-gray-500 text-xl bottom-0 left-0 min-w-20vh items-end justify-center hover:bg-gray-700 hover:border border-white">Choose Your Plan</button>
 
-      <div className="mt-8 min-h-[40vh] min-w-[40vw] bg-slate-300 p-8 font-semibold text-slate-500 text-2xl">
-        Unlock & lock your home from anywhere!
-        <p className="text-lg mt-4">State of the art sophisticated smartlocks with modern features.</p>
+      <div className="mt-8 border min-h-[40vh] min-w-[40vw] bg-slate-300 p-8">
+        {/* Create containers and adjust margins */}
+        <h1 className="font-bold text-3xl text-slate-600">Unlock & lock your home from anywhere!</h1>
+        <p className="text-lg mt-1 text-slate-500">State of the art sophisticated smartlocks with modern features.</p>
         <button className="flex mt-5 py-2 px-4 rounded-md bg-gray-500 text-xl text-white items-center justify-center hover:bg-gray-700">Read More</button>
         <div className="mt-2 min-h-[40vh] min-w-[40vw]">
-          <a href="" target="_blank"><img className="relative mt-20" style={{ objectFit: 'cover', width: '70vw', height: '46vh' }} src="/images/keychainimage-1.png" alt="KeyChain Picture" /></a>
+          <a href="" target="_blank"><img className="relative mt-10" style={{ objectFit: 'cover', width: '70vw', height: '46vh' }} src="/images/keychainimage-1.png" alt="KeyChain Picture" /></a>
         </div>
       </div>
 
@@ -134,17 +152,26 @@ export default function Home() {
       </div>
 
       <p className="mt-10 font-bold text-3xl">Compatibility</p>
-      <div className="mt-1 mb-10 h-[50vh] w-[80vw] bg-gray-400 rounded-2xl">
+      <div className="mt-1 border mb-10 h-[50vh] w-[80vw] bg-gray-400 rounded-2xl">
       <a href="" target="_blank"><img className="flex flex-col m-auto mt-8 p-5 items-center justify-center" style={{ objectFit: 'cover', height: '40vh' }} src="/images/appstore.png" alt="Appstore Picture" /></a>
       </div>
 
 
-      <div className="flex flex-col justify-center items-center mb-6 w-[50vw] bg-[#02020e] rounded-2xl">
+      <div className="flex flex-col justify-center items-center mb-12 w-[50vw] bg-gradient-to-b from-[#030e25] to-[#14254b] rounded-2xl border">
         <input className="m-auto text-center mt-6 flex justify-center items-center" placeholder="Join the mailing list"></input>
         <button className="p-1 m-2 rounded-md flex items-center justify-center text-center bg-sky-700">Submit</button>
       </div>
 
-      <div className="w-[100vw] h-40 bg-gradient-to-b from-[#030e25] to-[#14254b] font-sans text-[#AABDFC]">
+          <h1 className="text-xl font-semibold">Trusted by:</h1>
+      <div className="flex overflow-hidden border flex-row justify-start items-start mt-2 mb-20 bg-gradient-to-r from-transparent via-bg-gray-500 via-[#b8b8b8] to-transparent h-[20vh] w-[100vw]">
+      <img id="cars-list" className="flex" style={{ objectFit: 'cover', width: '100vw', height: '20vh' }} src="/images/carlist-1.png" alt="Cars List 1" />
+      <img id="cars-list" className="flex" style={{ objectFit: 'cover', width: '100vw', height: '20vh' }} src="/images/carlist-2.png" alt="Cars List 2" />
+      <img id="cars-list" className="flex" style={{ objectFit: 'cover', width: '100vw', height: '20vh' }} src="/images/carlist-1.png" alt="Cars List 1" />
+      <img id="cars-list" className="flex" style={{ objectFit: 'cover', width: '100vw', height: '20vh' }} src="/images/carlist-2.png" alt="Cars List 2" />
+      </div>
+
+
+      <div className="w-[100vw] h-40 bg-gradient-to-b from-[#030e25] to-[#14254b] border font-sans text-[#AABDFC]">
         <p className="mx-3 p-1">
           <a href="https://www.instagram.com/skyewasthelimit" target="_blank"><img className="absolute ml-[90vw] right-4 mt-4" style={{ width: '30px', height: '30px' }} src="/images/instagramlogo.png" alt="Instagram Logo" /></a>
           <a href="https://twitter.com/skyewasthelimit" target="_blank"><img className="absolute ml-[90vw] right-14 mt-4" style={{ width: '30px', height: '30px' }} src="/images/twitterlogo.png" alt="Twitter Logo" /></a>

@@ -81,3 +81,37 @@ main {
   background-color: #95A9E7;
   text-align: center;
 }
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 30px;
+  background-color: rgb(148, 148, 153);
+  min-width: 260px;
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 12px;
+  color: #02081a;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.dropdown-item:hover {
+  background-color: #95A9E7;
+}
+
+#cars-list {
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
