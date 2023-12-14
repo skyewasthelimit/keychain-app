@@ -70,7 +70,7 @@ export default function Home() {
 
       <div className="bg-gradient-to-r from-[#BBE3F2] via-[#90C1E2]  to-[#6E739A] w-[400px] h-[400px] mt-3 text-black">
         <div className="bg-gradient-to-r from-[#eef9fd] via-[#bababb] to-[#fafbfd] w-[400px] h-[400px] m-5 text-black">
-          <p className="m-6 text-2xl tracking-widest pt-4 pl-1">"Since I started using <strong>KeyChain</strong> my home has never felt safer! If I lose my key I can easily contact a service agent directly from the pad. <strong>KeyChain</strong> agents work 24 hours per day to ensure customer safety and care"</p>
+          <p className="m-6 text-2xl tracking-widest pt-4 pl-1">&quot;Since I started using <strong>KeyChain</strong> my home has never felt safer! If I lose my key I can easily contact a service agent directly from the pad. <strong>KeyChain</strong> agents work 24 hours per day to ensure customer safety and care&quot;</p>
           <p className="pl-14"> - John Plentyburg, <span className="text-sky-700">Customer</span></p>
         </div>
       </div>

@@ -19,7 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(#0d0d0e,
-  rgb(10, 2, 2))
+  rgb(10, 2, 2));
 }
 
 main {
